@@ -4,187 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Srinivas Reddy | SQL Server DBA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-font-family: 'Segoe UI', sans-serif;
-margin:0;
+font-family:'Poppins',sans-serif;
 background:#0f172a;
 color:#e2e8f0;
+transition:0.3s;
+}
+
+body.light{
+background:#f8fafc;
+color:#0f172a;
 }
 
 header{
 text-align:center;
-padding:60px 20px;
-background:#020617;
+padding:120px 20px;
+background:linear-gradient(135deg,#020617,#1e293b);
 }
 
-header h1{
-font-size:42px;
-margin:0;
-}
+.profile{width:120px;height:120px;border-radius:50%;border:3px solid #38bdf8;margin-bottom:20px}
 
-header p{
-font-size:18px;
-margin:10px 0;
-color:#94a3b8;
-}
+h1{font-size:48px}
 
 .btn{
-display:inline-block;
-margin-top:15px;
 padding:12px 25px;
 background:#2563eb;
+border-radius:25px;
 color:white;
 text-decoration:none;
-border-radius:6px;
 }
 
 nav{
-text-align:center;
-padding:15px;
-background:#020617;
+position:sticky;top:0;background:#020617;padding:15px;text-align:center;
 }
 
-nav a{
-color:#e2e8f0;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-}
+nav a{margin:10px;color:#e2e8f0;text-decoration:none}
 
-nav a:hover{
-color:#38bdf8;
-}
-
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-h2{
-color:#38bdf8;
-margin-bottom:20px;
-}
+section{padding:80px 20px;max-width:1100px;margin:auto}
 
 .card{
 background:#1e293b;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
 margin-bottom:20px;
-transition:0.3s;
+opacity:0;
+transform:translateY(30px);
+transition:0.4s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
+.card.show{opacity:1;transform:translateY(0)}
 
-.skills span{
-display:inline-block;
-background:#2563eb;
-padding:8px 14px;
-margin:5px;
-border-radius:6px;
-font-size:14px;
-}
+.skills span{background:#2563eb;padding:8px 14px;margin:5px;border-radius:20px;display:inline-block}
 
-footer{
-text-align:center;
-padding:20px;
+.code{
 background:#020617;
-margin-top:40px;
+padding:15px;
+border-radius:10px;
+font-family:monospace;
+overflow:auto;
 }
-</style>
 
+.toggle{
+position:fixed;
+top:20px;
+right:20px;
+cursor:pointer;
+background:#2563eb;
+padding:10px;
+border-radius:50%;
+}
+
+footer{text-align:center;padding:20px;background:#020617}
+</style>
 </head>
 
 <body>
 
+<div class="toggle" onclick="toggleMode()">🌙</div>
+
 <header>
+<img src="profile.jpg" class="profile">
 <h1>Srinivas Reddy</h1>
-<p>SQL Server DBA | 5+ Years Experience</p>
-<p>Performance Tuning | HA/DR | Backup & Recovery</p>
-<a href="#" class="btn">Download Resume</a>
+<p>SQL Server DBA | 6+ Years</p>
+<a href="resume.pdf" class="btn">Download Resume</a>
 </header>
 
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
+<a href="#sql">SQL Work</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-<h2>About Me</h2>
+<h2>About</h2>
 <div class="card">
-<p>
-Hi, I’m Srinivas Reddy 👋
-A passionate SQL Server Database Administrator with 5+ years of hands-on experience in managing and optimizing enterprise database systems.
-I specialize in:
-⚙️ Database Installation & Configuration
-🚀 Performance Tuning & Query Optimization
-🔐 Backup, Recovery & Disaster Planning
-📊 High Availability & Production Support
-I’ve worked extensively on real-time production environments, ensuring database reliability, performance, and security. My strength lies in identifying performance bottlenecks, optimizing queries, and maintaining smooth database operations with minimal downtime.
-Currently, I’m focused on advancing my expertise in:
-☁️ Cloud Databases (Azure / AWS)
-📈 Advanced Performance Tuning
-🧠 Automation & Monitoring Solutions
-I enjoy solving complex database challenges and continuously improving systems to support business growth.
-</p>
+<p>SQL DBA with 6+ years experience in performance tuning, HA/DR and database optimization.</p>
 </div>
 </section>
 
 <section id="skills">
-<h2>Technical Skills</h2>
+<h2>Skills</h2>
 <div class="skills">
-<span>SQL Server</span>
-<span>T-SQL</span>
-<span>Performance Tuning</span>
-<span>Index Optimization</span>
-<span>Backup & Recovery</span>
-<span>Always On</span>
-<span>Log Shipping</span>
-<span>Replication</span>
-<span>SQL Agent</span>
-<span>Windows Server</span>
+<span>SQL Server</span><span>T-SQL</span><span>Performance Tuning</span><span>Always On</span>
 </div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
-
 <div class="card">
-<h3>Hospital Management System (HIS)</h3>
-<ul>
-<li>Managed live production database for hospital operations</li>
-<li>Improved query performance using indexing</li>
-<li>Handled backup & recovery strategies</li>
-</ul>
+<h3>Hospital Management System</h3>
+<a href="#">GitHub Link</a>
 </div>
-
-<div class="card">
-<h3>SQL Server Migration</h3>
-<ul>
-<li>Migrated SQL Server 2012 to 2019</li>
-<li>Ensured minimal downtime</li>
-<li>Validated data integrity post migration</li>
-</ul>
-</div>
-
 </section>
 
-<section id="experience">
-<h2>Experience</h2>
+<section id="sql">
+<h2>SQL Showcase</h2>
 <div class="card">
-<ul>
-<li>Managed 20+ production databases</li>
-<li>Improved query performance by 30%</li>
-<li>Implemented automated backups using SQL Agent</li>
-<li>Ensured high availability and uptime</li>
-</ul>
+<div class="code">
+SELECT TOP 10 * FROM Patients ORDER BY CreatedDate DESC;
+</div>
 </div>
 </section>
 
@@ -192,13 +136,29 @@ I enjoy solving complex database challenges and continuously improving systems t
 <h2>Contact</h2>
 <div class="card">
 <p>Email: seelamsrinivasreddy@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/srinivasareddy-seelam</p>
+<p><a href="https://linkedin.com/in/srinivasareddy-seelam" target="_blank">LinkedIn</a></p>
 </div>
 </section>
 
 <footer>
 <p>© 2026 Srinivas Reddy</p>
 </footer>
+
+<script>
+// scroll animation
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+const trigger=window.innerHeight*0.85;
+cards.forEach(card=>{
+if(card.getBoundingClientRect().top<trigger){card.classList.add('show');}
+});
+});
+
+// dark mode
+function toggleMode(){
+document.body.classList.toggle('light');
+}
+</script>
 
 </body>
 </html>
