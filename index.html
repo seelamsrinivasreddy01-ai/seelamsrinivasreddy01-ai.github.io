@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Srinivas Reddy | SQL Server DBA</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#0f172a;
@@ -26,7 +28,13 @@ padding:120px 20px;
 background:linear-gradient(135deg,#020617,#1e293b);
 }
 
-.profile{width:120px;height:120px;border-radius:50%;border:3px solid #38bdf8;margin-bottom:20px}
+.profile{
+width:120px;
+height:120px;
+border-radius:50%;
+border:3px solid #38bdf8;
+margin-bottom:20px;
+}
 
 h1{font-size:48px}
 
@@ -39,12 +47,33 @@ text-decoration:none;
 }
 
 nav{
-position:sticky;top:0;background:#020617;padding:15px;text-align:center;
+position:sticky;
+top:0;
+background:#020617;
+padding:15px;
+text-align:center;
 }
 
-nav a{margin:10px;color:#e2e8f0;text-decoration:none}
+nav a{
+margin:10px;
+color:#e2e8f0;
+text-decoration:none;
+}
 
-section{padding:80px 20px;max-width:1100px;margin:auto}
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
 
 .card{
 background:#1e293b;
@@ -56,9 +85,18 @@ transform:translateY(30px);
 transition:0.4s;
 }
 
-.card.show{opacity:1;transform:translateY(0)}
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
 
-.skills span{background:#2563eb;padding:8px 14px;margin:5px;border-radius:20px;display:inline-block}
+.skills span{
+background:#2563eb;
+padding:8px 14px;
+margin:5px;
+border-radius:20px;
+display:inline-block;
+}
 
 .code{
 background:#020617;
@@ -78,7 +116,11 @@ padding:10px;
 border-radius:50%;
 }
 
-footer{text-align:center;padding:20px;background:#020617}
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
 </style>
 </head>
 
@@ -88,8 +130,8 @@ footer{text-align:center;padding:20px;background:#020617}
 
 <header>
 <img src="profile.jpg" class="profile">
-<h1>Srinivas Reddy</h1>
-<p>SQL Server DBA | 6+ Years</p>
+<h1>Srinivas Reddy Seelam</h1>
+<p><strong>SQL Server DBA | 6+ Years | Performance Tuning | Backup & Recovery | Disaster Recovery | Always Learning | Open to Opportunities</strong></p>
 <a href="resume.pdf" class="btn">Download Resume</a>
 </header>
 
@@ -97,29 +139,73 @@ footer{text-align:center;padding:20px;background:#020617}
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
 <a href="#sql">SQL Work</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-<h2>About</h2>
+<h2>About Me</h2>
 <div class="card">
-<p>SQL DBA with 6+ years experience in performance tuning, HA/DR and database optimization.</p>
+<p>
+Hi, I’m Srinivas Reddy 👋<br><br>
+SQL Server DBA with 6+ years of experience in managing enterprise databases.<br><br>
+💼 Role: SQL DBA<br>
+🏥 Domain: Healthcare IT (HIS & LIMS)<br>
+🚀 Availability: Open to full-time roles & freelance projects
+</p>
 </div>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills">
-<span>SQL Server</span><span>T-SQL</span><span>Performance Tuning</span><span>Always On</span>
+<span>SQL Server</span>
+<span>T-SQL</span>
+<span>Performance Tuning</span>
+<span>Always On</span>
+<span>Backup & Recovery</span>
+<span>Log Shipping</span>
+<span>Replication</span>
 </div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
+
 <div class="card">
-<h3>Hospital Management System</h3>
-<a href="#">GitHub Link</a>
+<h3>Hospital Management System (HIMS)</h3>
+<p>Handled database operations, performance tuning, and billing optimization for hospital workflows.</p>
+</div>
+
+<div class="card">
+<h3>Laboratory Information Management System (LIMS)</h3>
+<p>Managed diagnostic data systems and improved report generation performance.</p>
+</div>
+
+<div class="card">
+<h3>Payroll Management System</h3>
+<p>Maintained payroll database and optimized reporting queries.</p>
+</div>
+
+<div class="card">
+<h3>SQL Server Migration (2005 → 2025)</h3>
+<p>Successfully migrated databases with minimal downtime and ensured data integrity.</p>
+</div>
+
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="card">
+<ul>
+<li>Managed 60+ production SQL Server databases</li>
+<li>Improved query performance by up to 40%</li>
+<li>Implemented HA/DR solutions (Always On, Log Shipping)</li>
+<li>Designed backup & recovery strategies</li>
+<li>Automated maintenance using SQL Server Agent</li>
+<li>Provided 24/7 production support</li>
+</ul>
 </div>
 </section>
 
@@ -127,7 +213,10 @@ footer{text-align:center;padding:20px;background:#020617}
 <h2>SQL Showcase</h2>
 <div class="card">
 <div class="code">
-SELECT TOP 10 * FROM Patients ORDER BY CreatedDate DESC;
+SELECT PatientID, COUNT(*) AS VisitCount
+FROM Visits
+GROUP BY PatientID
+ORDER BY VisitCount DESC;
 </div>
 </div>
 </section>
@@ -136,7 +225,7 @@ SELECT TOP 10 * FROM Patients ORDER BY CreatedDate DESC;
 <h2>Contact</h2>
 <div class="card">
 <p>Email: seelamsrinivasreddy@gmail.com</p>
-<p><a href="https://linkedin.com/in/srinivasareddy-seelam" target="_blank">LinkedIn</a></p>
+<p><a href="https://linkedin.com/in/srinivasareddy-seelam" target="_blank">LinkedIn Profile</a></p>
 </div>
 </section>
 
@@ -145,16 +234,17 @@ SELECT TOP 10 * FROM Patients ORDER BY CreatedDate DESC;
 </footer>
 
 <script>
-// scroll animation
 const cards=document.querySelectorAll('.card');
+
 window.addEventListener('scroll',()=>{
 const trigger=window.innerHeight*0.85;
 cards.forEach(card=>{
-if(card.getBoundingClientRect().top<trigger){card.classList.add('show');}
+if(card.getBoundingClientRect().top<trigger){
+card.classList.add('show');
+}
 });
 });
 
-// dark mode
 function toggleMode(){
 document.body.classList.toggle('light');
 }
