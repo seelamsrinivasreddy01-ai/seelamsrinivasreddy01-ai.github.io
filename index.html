@@ -1,275 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Srinivas Reddy | SQL Server DBA</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#0f172a;
-color:#e2e8f0;
-transition:0.3s;
-}
-
-body.light{
-background:#f8fafc;
-color:#0f172a;
-}
-
-header{
-text-align:center;
-padding:120px 20px;
-background:linear-gradient(135deg,#020617,#1e293b);
-}
-
-.profile{
-width:120px;
-height:120px;
-border-radius:50%;
-border:3px solid #38bdf8;
-margin-bottom:20px;
-}
-
-h1{font-size:48px}
-
-.btn{
-padding:12px 25px;
-background:#2563eb;
-border-radius:25px;
-color:white;
-text-decoration:none;
-}
-
-nav{
-position:sticky;
-top:0;
-background:#020617;
-padding:15px;
-text-align:center;
-}
-
-nav a{
-margin:10px;
-color:#e2e8f0;
-text-decoration:none;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-h2{
-color:#38bdf8;
-margin-bottom:20px;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:12px;
-margin-bottom:20px;
-opacity:0;
-transform:translateY(30px);
-transition:0.4s;
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.skills span{
-background:#2563eb;
-padding:8px 14px;
-margin:5px;
-border-radius:20px;
-display:inline-block;
-}
-
-.code{
-background:#020617;
-padding:15px;
-border-radius:10px;
-font-family:monospace;
-overflow:auto;
-}
-
-.toggle{
-position:fixed;
-top:20px;
-right:20px;
-cursor:pointer;
-background:#2563eb;
-padding:10px;
-border-radius:50%;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#020617;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinivas Reddy | Senior SQL Server DBA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --accent-green: #2ecc71;
+            --bg-light: #f4f7f9;
+            --text-dark: #333;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        header { background: var(--primary-blue); color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--accent-green); }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        h2 { color: var(--primary-blue); border-left: 5px solid var(--accent-green); padding-left: 15px; }
+        .skill-tag { display: inline-block; background: #e1e8ed; padding: 5px 15px; border-radius: 20px; margin: 5px; font-weight: bold; font-size: 0.9em; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
+        .btn { background: var(--accent-green); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; font-weight: bold; }
+        .btn:hover { background: #27ae60; }
+    </style>
 </head>
-
 <body>
 
-<div class="toggle" onclick="toggleMode()">🌙</div>
-
 <header>
-<img src="profile.jpg" class="profile">
-<h1>Srinivas Reddy Seelam</h1>
-<p><strong>SQL Server DBA | 6+ Years | Performance Tuning | Backup & Recovery | Disaster Recovery | Always Learning | Open to Opportunities</strong></p>
-<a href="resume.pdf" class="btn">Download Resume</a>
+    <h1>Srinivas Reddy Seelam</h1>
+    <p>Senior SQL Server DBA | 6+ Years | Performance Tuning Specialist</p>
+    <a href="mailto:seelamsrinivasreddy@gmail.com" class="btn"><i class="fas fa-envelope"></i> Contact Me</a>
 </header>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#sql">SQL Work</a>
-<a href="#contact">Contact</a>
-</nav>
+<div class="container">
+    <section id="about" class="card">
+        <h2>About Me</h2>
+        <p>Expert *SQL Server Database Administrator* with a proven track record of managing 60+ production databases. Specialized in high-concurrency environments like *Hospital Management Systems (HIMS)* and *LIMS*.</p>
+        <p>I specialize in reducing downtime through robust HA/DR solutions (Always On, Log Shipping) and boosting efficiency through query optimization.</p>
+    </section>
 
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>
-Hi, I’m <strong>Srinivas Reddy</strong> 👋<br><br>
+    <section id="skills" class="card">
+        <h2>Core Technical Skills</h2>
+        <div class="skill-tag">SQL Server 2005-2022</div>
+        <div class="skill-tag">T-SQL & Stored Procs</div>
+        <div class="skill-tag">Performance Tuning</div>
+        <div class="skill-tag">Always On Availability Groups</div>
+        <div class="skill-tag">Backup & Recovery Strategy</div>
+        <div class="skill-tag">Replication & Log Shipping</div>
+        <div class="skill-tag">Azure SQL / AWS RDS</div>
+    </section>
 
-A passionate <strong>SQL Server Database Administrator</strong> with 6+ years of hands-on experience in managing and optimizing enterprise database systems.<br><br>
-
-<strong>Core Expertise:</strong><br>
-⚙️ Database Installation & Configuration<br>
-🚀 Performance Tuning & Query Optimization<br>
-🔐 Backup, Recovery & Disaster Planning<br>
-📊 High Availability & Production Support<br><br>
-
-I have extensive experience working in real-time production environments, ensuring high database reliability, performance, and security. My strength lies in identifying performance bottlenecks, optimizing queries, and maintaining smooth operations with minimal downtime.<br><br>
-
-<strong>Domain Expertise:</strong><br>
-I have strong hands-on experience in:<br>
-🏥 Hospital Management Systems (HIMS)<br>
-🧪 Laboratory Information Management Systems (LIMS)<br>
-💼 Payroll Management Systems<br><br>
-
-I am highly skilled in <strong>end-to-end deployment, database setup, and domain-level implementation</strong>, with complete functional and technical understanding of these systems.<br><br>
-
-<strong>Currently Exploring:</strong><br>
-☁️ Cloud Databases (Azure / AWS)<br>
-📈 Advanced Performance Tuning<br>
-🧠 Automation & Monitoring Solutions<br><br>
-
-I enjoy solving complex database challenges and continuously improving systems to support business growth.
-</p>
-</div>
-</section>
-
-<section id="skills">
-<h2>Skills</h2>
-<div class="skills">
-<span>SQL Server</span>
-<span>T-SQL</span>
-<span>Performance Tuning</span>
-<span>Always On</span>
-<span>Backup & Recovery</span>
-<span>Log Shipping</span>
-<span>Replication</span>
-</div>
-</section>
-
-<section id="projects">
-<h2>Projects</h2>
-
-<div class="card">
-<h3>Hospital Management System (HIMS)</h3>
-<p>Handled deployment, database operations, performance tuning, and billing optimization.</p>
+    <section id="projects" class="card">
+        <h2>Domain Expertise & Projects</h2>
+        <div class="project-grid">
+            <div>
+                <h3>🏥 HIMS Deployment</h3>
+                <p>End-to-end database deployment and billing optimization for large-scale hospitals.</p>
+            </div>
+            <div>
+                <h3>🧪 LIMS Management</h3>
+                <p>Database performance tuning for diagnostic laboratories ensuring zero-latency reporting.</p>
+            </div>
+            <div>
+                <h3>🚀 Migration Specialist</h3>
+                <p>Successfully migrated legacy systems (SQL 2005) to modern SQL 2025 environments with zero data loss.</p>
+            </div>
+        </div>
+    </section>
 </div>
 
-<div class="card">
-<h3>Laboratory Information Management System (LIMS)</h3>
-<p>Managed diagnostics database, improved report performance, and ensured data accuracy.</p>
+<div class="footer">
+    <p>&copy; 2026 Srinivas Reddy | <a href="https://linkedin.com/in/srinivasareddy-seelam">LinkedIn</a></p>
 </div>
-
-<div class="card">
-<h3>Payroll Management System</h3>
-<p>Maintained payroll database, optimized reports, and ensured secure processing.</p>
-</div>
-
-<div class="card">
-<h3>SQL Server Migration (2005 → 2025)</h3>
-<p>Successfully migrated databases with minimal downtime and full data integrity validation.</p>
-</div>
-
-</section>
-
-<section id="experience">
-<h2>Experience</h2>
-<div class="card">
-<ul>
-<li>Managed 60+ production SQL Server databases</li>
-<li>Improved query performance by up to 40%</li>
-<li>Implemented HA/DR solutions (Always On, Log Shipping)</li>
-<li>Designed backup & recovery strategies</li>
-<li>Automated maintenance using SQL Server Agent</li>
-<li>Provided 24/7 production support</li>
-</ul>
-</div>
-</section>
-
-<section id="sql">
-<h2>SQL Showcase</h2>
-<div class="card">
-<div class="code">
-SELECT PatientID, COUNT(*) AS VisitCount
-FROM Visits
-GROUP BY PatientID
-ORDER BY VisitCount DESC;
-</div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>Email: seelamsrinivasreddy@gmail.com</p>
-<p><a href="https://linkedin.com/in/srinivasareddy-seelam" target="_blank">LinkedIn Profile</a></p>
-</div>
-</section>
-
-<footer>
-<p>© 2026 Srinivas Reddy</p>
-</footer>
-
-<script>
-const cards=document.querySelectorAll('.card');
-
-window.addEventListener('scroll',()=>{
-const trigger=window.innerHeight*0.85;
-cards.forEach(card=>{
-if(card.getBoundingClientRect().top<trigger){
-card.classList.add('show');
-}
-});
-});
-
-function toggleMode(){
-document.body.classList.toggle('light');
-}
-</script>
 
 </body>
 </html>
