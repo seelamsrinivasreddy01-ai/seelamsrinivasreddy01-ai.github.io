@@ -27,7 +27,7 @@ nav {
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(15,23,42,0.8);
+    background:rgba(15,23,42,0.85);
     backdrop-filter:blur(12px);
     display:flex;
     justify-content:center;
@@ -40,7 +40,6 @@ nav a {
     margin:0 15px;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
 }
 
 nav a:hover {
@@ -81,7 +80,6 @@ section {
 h2 {
     color:#22c55e;
     margin-bottom:20px;
-    font-size:28px;
 }
 
 /* CARDS */
@@ -90,10 +88,10 @@ h2 {
     padding:25px;
     margin-bottom:20px;
     border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
     transition:0.4s;
     opacity:0;
     transform:translateY(40px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .card.show {
@@ -111,6 +109,19 @@ h2 {
     font-size:13px;
 }
 
+/* COUNTERS */
+.stats {
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    flex-wrap:wrap;
+}
+
+.stat h1 {
+    font-size:55px;
+    color:#22c55e;
+}
+
 /* BUTTON */
 .btn {
     display:inline-block;
@@ -122,17 +133,6 @@ h2 {
     text-decoration:none;
     font-weight:600;
 }
-
-/* LIST */
-ul {
-    padding-left:20px;
-}
-
-footer {
-    text-align:center;
-    padding:30px;
-    color:#94a3b8;
-}
 </style>
 </head>
 
@@ -142,10 +142,10 @@ footer {
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
+<a href="#stats">Stats</a>
 <a href="#domain">Domain</a>
 <a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#achievements">Achievements</a>
+<a href="#projects">Projects</a>
 </nav>
 
 <!-- HERO -->
@@ -162,31 +162,54 @@ footer {
 <h2>About Me</h2>
 <div class="card">
 <p>
-SQL Server DBA with 6+ years of experience managing enterprise-grade production databases.
-Specialized in Healthcare IT, Laboratory Information Systems (LIS), and Payroll Management Systems
-with strong expertise in High Availability, Disaster Recovery, and Performance Optimization.
+Senior SQL Server DBA with 6+ years of experience managing enterprise production databases.
+Specialized in Healthcare, LIS (Diagnostic Systems), and Payroll Management systems with strong expertise in HA/DR and Performance Tuning.
 </p>
+</div>
+</section>
+
+<!-- COUNTERS -->
+<section id="stats">
+<h2>Implementation Summary</h2>
+
+<div class="card stats">
+
+<div class="stat">
+<h1 class="count" data-target="60">0</h1>
+<p>Hospital Systems</p>
+</div>
+
+<div class="stat">
+<h1 class="count" data-target="10">0</h1>
+<p>LIS Systems</p>
+</div>
+
+<div class="stat">
+<h1 class="count" data-target="5">0</h1>
+<p>Payroll Systems</p>
+</div>
+
 </div>
 </section>
 
 <!-- DOMAIN -->
 <section id="domain">
 <h2>Domain Expertise</h2>
+
 <div class="card">
 <ul>
 <li><b>Hospital Management Systems (HMS)</b> – Patient care, billing, pharmacy, OP/IP workflows</li>
 <li><b>Laboratory Information Systems (LIS)</b> – Diagnostic workflows, sample tracking, reporting systems</li>
 <li><b>Payroll Management Systems</b> – Salary processing, HR automation, employee records</li>
 </ul>
-<p style="margin-top:10px;">
-Ensuring high availability, secure architecture, and optimized database performance for mission-critical systems.
-</p>
 </div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Technical Skills</h2>
+
 <div class="card skills">
 <span>SQL Server 2005–2022</span>
 <span>Always On AG</span>
@@ -197,45 +220,38 @@ Ensuring high availability, secure architecture, and optimized database performa
 <span>Azure SQL</span>
 <span>PowerShell</span>
 </div>
+
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
-<div class="card">
-<ul>
-<li>Managed 60+ Hospital Management Systems in production environments</li>
-<li>Delivered 10+ Laboratory Information Systems for diagnostic centers</li>
-<li>Implemented 5+ Payroll Management Systems for enterprise HR systems</li>
-<li>Configured Always On, Clustering, and High Availability solutions</li>
-<li>Handled performance tuning and critical production issues</li>
-<li>Executed database migrations with zero downtime</li>
-</ul>
-</div>
-</section>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Domain Projects</h2>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-<h2>Key Achievements</h2>
 <div class="card">
-<ul>
-<li>Successfully implemented <b>60+ Hospital Systems</b></li>
-<li>Delivered <b>10+ LIS systems</b> for diagnostic labs</li>
-<li>Implemented <b>5+ Payroll Management systems</b></li>
-<li>Improved database performance and reduced downtime significantly</li>
-<li>Handled enterprise-level production support environments</li>
-</ul>
+<h3>🏥 Hospital Management Systems (HMS)</h3>
+<p>60+ enterprise implementations supporting patient care, billing, pharmacy, and clinical workflows.</p>
 </div>
+
+<div class="card">
+<h3>🧪 Laboratory Information Systems (LIS)</h3>
+<p>10+ diagnostic center systems managing sample tracking, lab workflows, and reporting accuracy.</p>
+</div>
+
+<div class="card">
+<h3>💰 Payroll Management Systems</h3>
+<p>5+ enterprise payroll systems handling HR automation, salary processing, and employee data security.</p>
+</div>
+
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer style="text-align:center; padding:30px; color:#94a3b8;">
 © 2026 Srinivas Reddy Seelam | SQL Server DBA Portfolio
 </footer>
 
 <script>
-// TYPING ANIMATION
-const text = "Senior SQL Server DBA | Healthcare • LIS • Payroll Expert | HA/DR | Performance Tuning Specialist";
+// TYPING EFFECT
+const text = "Senior SQL Server DBA | Healthcare • LIS • Payroll | HA/DR | Performance Tuning Expert";
 let i = 0;
 
 function type() {
@@ -252,9 +268,36 @@ const cards = document.querySelectorAll(".card");
 
 window.addEventListener("scroll", () => {
     cards.forEach(card => {
-        const pos = card.getBoundingClientRect().top;
-        if (pos < window.innerHeight - 100) {
+        const top = card.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
             card.classList.add("show");
+        }
+    });
+});
+
+// COUNTER ANIMATION
+const counters = document.querySelectorAll('.count');
+
+counters.forEach(counter => {
+    const update = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const inc = target / 100;
+
+        if (current < target) {
+            counter.innerText = Math.ceil(current + inc);
+            setTimeout(update, 30);
+        } else {
+            counter.innerText = target + "+";
+        }
+    };
+
+    window.addEventListener("scroll", () => {
+        const section = document.getElementById("stats");
+        const top = section.getBoundingClientRect().top;
+
+        if (top < window.innerHeight - 100) {
+            update();
         }
     });
 });
