@@ -1,77 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinivas Reddy | Senior SQL Server DBA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-blue: #003366;
-            --accent-green: #2ecc71;
-            --bg-light: #f4f7f9;
-            --text-dark: #333;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-        header { background: var(--primary-blue); color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--accent-green); }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 25px; }
-        h2 { color: var(--primary-blue); border-left: 5px solid var(--accent-green); padding-left: 15px; }
-        .skill-tag { display: inline-block; background: #e1e8ed; padding: 5px 15px; border-radius: 20px; margin: 5px; font-weight: bold; font-size: 0.9em; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
-        .btn { background: var(--accent-green); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; font-weight: bold; }
-        .btn:hover { background: #27ae60; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Srinivas Reddy Seelam | Senior SQL Server DBA</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+:root {
+    --primary:#0a192f;
+    --accent:#00c896;
+    --light:#f5f7fa;
+    --text:#333;
+}
+
+body {
+    margin:0;
+    font-family:Segoe UI;
+    background:var(--light);
+    color:var(--text);
+}
+
+header {
+    background:linear-gradient(135deg,#0a192f,#112240);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+header h1 {
+    margin:0;
+    font-size:40px;
+}
+
+header p {
+    font-size:18px;
+    margin:10px 0;
+    opacity:0.9;
+}
+
+.btn {
+    background:var(--accent);
+    padding:12px 25px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.container {
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.card {
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+    border-left:5px solid var(--accent);
+    padding-left:10px;
+    color:var(--primary);
+}
+
+.skills span {
+    background:#e6f7f2;
+    padding:8px 14px;
+    margin:5px;
+    display:inline-block;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+footer {
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Srinivas Reddy Seelam</h1>
-    <p>Senior SQL Server DBA | 6+ Years | Performance Tuning Specialist</p>
-    <a href="mailto:seelamsrinivasreddy@gmail.com" class="btn"><i class="fas fa-envelope"></i> Contact Me</a>
+<h1>Srinivas Reddy Seelam</h1>
+<p>Senior SQL Server DBA | 6+ Years Experience | Performance Tuning Expert</p>
+<a href="mailto:youremail@gmail.com" class="btn">Contact Me</a>
 </header>
 
 <div class="container">
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>Expert *SQL Server Database Administrator* with a proven track record of managing 60+ production databases. Specialized in high-concurrency environments like *Hospital Management Systems (HIMS)* and *LIMS*.</p>
-        <p>I specialize in reducing downtime through robust HA/DR solutions (Always On, Log Shipping) and boosting efficiency through query optimization.</p>
-    </section>
 
-    <section id="skills" class="card">
-        <h2>Core Technical Skills</h2>
-        <div class="skill-tag">SQL Server 2005-2022</div>
-        <div class="skill-tag">T-SQL & Stored Procs</div>
-        <div class="skill-tag">Performance Tuning</div>
-        <div class="skill-tag">Always On Availability Groups</div>
-        <div class="skill-tag">Backup & Recovery Strategy</div>
-        <div class="skill-tag">Replication & Log Shipping</div>
-        <div class="skill-tag">Azure SQL / AWS RDS</div>
-    </section>
-
-    <section id="projects" class="card">
-        <h2>Domain Expertise & Projects</h2>
-        <div class="project-grid">
-            <div>
-                <h3>🏥 HIMS Deployment</h3>
-                <p>End-to-end database deployment and billing optimization for large-scale hospitals.</p>
-            </div>
-            <div>
-                <h3>🧪 LIMS Management</h3>
-                <p>Database performance tuning for diagnostic laboratories ensuring zero-latency reporting.</p>
-            </div>
-            <div>
-                <h3>🚀 Migration Specialist</h3>
-                <p>Successfully migrated legacy systems (SQL 2005) to modern SQL 2025 environments with zero data loss.</p>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h2>Professional Summary</h2>
+<p>
+Results-driven SQL Server DBA with 6+ years of experience managing mission-critical databases.
+Expert in performance tuning, backup/recovery, HA/DR solutions (Always On, Log Shipping, Clustering),
+and database migrations. Proven ability to maintain high availability and optimize large-scale systems.
+</p>
 </div>
 
-<div class="footer">
-    <p>&copy; 2026 Srinivas Reddy | <a href="https://linkedin.com/in/srinivasareddy-seelam">LinkedIn</a></p>
+<div class="card">
+<h2>Technical Skills</h2>
+<div class="skills">
+<span>SQL Server 2005–2022</span>
+<span>T-SQL</span>
+<span>Performance Tuning</span>
+<span>Always On AG</span>
+<span>Log Shipping</span>
+<span>Replication</span>
+<span>Backup & Recovery</span>
+<span>Azure SQL</span>
+<span>Windows Server</span>
 </div>
+</div>
+
+<div class="card">
+<h2>Professional Experience</h2>
+<p><b>Athentech India Pvt Ltd – Hyderabad</b> (Jun 2019 – Present)</p>
+<ul>
+<li>Managed 60+ production databases with high availability.</li>
+<li>Implemented Always On, Log Shipping & Clustering.</li>
+<li>Performed query optimization improving performance by up to 40%.</li>
+<li>Handled backup, restore, disaster recovery scenarios.</li>
+<li>Resolved critical production issues and outages.</li>
+<li>Executed database migrations (SQL 2005 → SQL 2019/2022).</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Projects & Domain Expertise</h2>
+<div class="grid">
+<div>
+<h3>🏥 Hospital Management Systems</h3>
+<p>Handled high-volume healthcare databases ensuring uptime & performance.</p>
+</div>
+
+<div>
+<h3>🧪 Laboratory Systems (LIMS)</h3>
+<p>Optimized reporting queries and reduced latency.</p>
+</div>
+
+<div>
+<h3>🚀 Database Migration</h3>
+<p>Upgraded legacy systems with zero downtime and no data loss.</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h2>Education</h2>
+<p>B.Sc Computers – Kakatiya University (2018)</p>
+</div>
+
+<div class="card">
+<h2>Certifications</h2>
+<p>FTCPL Certification – PMKVY (2019)</p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Srinivas Reddy Seelam | SQL DBA Portfolio</p>
+</footer>
 
 </body>
 </html>
