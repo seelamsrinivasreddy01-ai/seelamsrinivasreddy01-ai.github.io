@@ -10,47 +10,26 @@
 
 <style>
 :root {
-    --primary:#0a192f;
-    --accent:#00c896;
-    --light:#f5f7fa;
-    --text:#333;
+    --primary:#0f172a;
+    --accent:#22c55e;
+    --light:#f1f5f9;
 }
 
 body {
     margin:0;
     font-family:Segoe UI;
     background:var(--light);
-    color:var(--text);
 }
 
 header {
-    background:linear-gradient(135deg,#0a192f,#112240);
+    background:#0f172a;
     color:white;
     text-align:center;
-    padding:70px 20px;
+    padding:60px 20px;
 }
 
-header h1 {
-    margin:0;
-    font-size:40px;
-}
-
-header p {
-    font-size:18px;
-    margin:10px 0;
-    opacity:0.9;
-}
-
-.btn {
-    background:var(--accent);
-    padding:12px 25px;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    display:inline-block;
-    margin-top:15px;
-    font-weight:bold;
-}
+h1 { margin:0; font-size:38px; }
+h2 { color:#0f172a; border-left:4px solid var(--accent); padding-left:10px; }
 
 .container {
     max-width:1100px;
@@ -63,23 +42,19 @@ header p {
     padding:25px;
     margin-bottom:20px;
     border-radius:8px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-h2 {
-    border-left:5px solid var(--accent);
-    padding-left:10px;
-    color:var(--primary);
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
 .skills span {
-    background:#e6f7f2;
+    display:inline-block;
+    background:#dcfce7;
     padding:8px 14px;
     margin:5px;
-    display:inline-block;
     border-radius:20px;
     font-size:14px;
 }
+
+ul { padding-left:20px; }
 
 .grid {
     display:grid;
@@ -87,10 +62,14 @@ h2 {
     gap:20px;
 }
 
-footer {
-    text-align:center;
-    padding:30px;
-    color:#777;
+.btn {
+    background:var(--accent);
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:10px;
 }
 </style>
 </head>
@@ -99,7 +78,7 @@ footer {
 
 <header>
 <h1>Srinivas Reddy Seelam</h1>
-<p>Senior SQL Server DBA | 6+ Years Experience | Performance Tuning Expert</p>
+<p>Senior SQL Server DBA | 6+ Years | HA/DR | Performance Tuning | Azure</p>
 <a href="mailto:youremail@gmail.com" class="btn">Contact Me</a>
 </header>
 
@@ -108,63 +87,83 @@ footer {
 <div class="card">
 <h2>Professional Summary</h2>
 <p>
-Results-driven SQL Server DBA with 6+ years of experience managing mission-critical databases.
-Expert in performance tuning, backup/recovery, HA/DR solutions (Always On, Log Shipping, Clustering),
-and database migrations. Proven ability to maintain high availability and optimize large-scale systems.
+SQL Server DBA with 6+ years of experience managing enterprise production databases.
+Expert in High Availability (Always On, Clustering), Performance Tuning, Backup & Recovery,
+and Database Migrations. Strong experience handling critical production environments
+with zero downtime strategies.
 </p>
 </div>
 
 <div class="card">
-<h2>Technical Skills</h2>
+<h2>Core Technical Skills</h2>
 <div class="skills">
 <span>SQL Server 2005–2022</span>
-<span>T-SQL</span>
 <span>Performance Tuning</span>
 <span>Always On AG</span>
 <span>Log Shipping</span>
-<span>Replication</span>
+<span>Database Clustering</span>
 <span>Backup & Recovery</span>
+<span>T-SQL</span>
+<span>Replication</span>
 <span>Azure SQL</span>
-<span>Windows Server</span>
+<span>PowerShell</span>
 </div>
+</div>
+
+<div class="card">
+<h2>Key Expertise</h2>
+<ul>
+<li>High Availability & Disaster Recovery (Always On, Mirroring, Log Shipping)</li>
+<li>Query Optimization & Index Tuning</li>
+<li>Database Migration & Upgrade (SQL 2005 → 2022)</li>
+<li>Backup Compression, Encryption & Restore Strategies</li>
+<li>SQL Server Security & Login Management</li>
+<li>Linked Servers & Cross-Platform Data Integration</li>
+<li>Monitoring & Alerting (SQL Agent, WMI Alerts)</li>
+<li>Corruption Handling & Disaster Recovery</li>
+</ul>
 </div>
 
 <div class="card">
 <h2>Professional Experience</h2>
 <p><b>Athentech India Pvt Ltd – Hyderabad</b> (Jun 2019 – Present)</p>
 <ul>
-<li>Managed 60+ production databases with high availability.</li>
-<li>Implemented Always On, Log Shipping & Clustering.</li>
-<li>Performed query optimization improving performance by up to 40%.</li>
-<li>Handled backup, restore, disaster recovery scenarios.</li>
-<li>Resolved critical production issues and outages.</li>
-<li>Executed database migrations (SQL 2005 → SQL 2019/2022).</li>
+<li>Managed 60+ production databases in critical environments</li>
+<li>Configured Always On Availability Groups & Failover Clusters</li>
+<li>Performed advanced performance tuning using execution plans</li>
+<li>Handled database corruption recovery with minimal data loss</li>
+<li>Implemented backup strategies (Full, Diff, Log)</li>
+<li>Configured replication (Transactional, Snapshot, Merge)</li>
+<li>Managed SQL Server upgrades and migrations</li>
+<li>Worked on Azure SQL database deployments</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>Projects & Domain Expertise</h2>
+<h2>Projects</h2>
 <div class="grid">
+
 <div>
-<h3>🏥 Hospital Management Systems</h3>
-<p>Handled high-volume healthcare databases ensuring uptime & performance.</p>
+<h3>🏥 Healthcare Database Systems</h3>
+<p>Handled hospital & LIMS databases with high concurrency and zero downtime.</p>
 </div>
 
 <div>
-<h3>🧪 Laboratory Systems (LIMS)</h3>
-<p>Optimized reporting queries and reduced latency.</p>
+<h3>🚀 Migration Projects</h3>
+<p>Upgraded legacy databases ensuring performance improvement and stability.</p>
 </div>
 
 <div>
-<h3>🚀 Database Migration</h3>
-<p>Upgraded legacy systems with zero downtime and no data loss.</p>
+<h3>⚡ Performance Optimization</h3>
+<p>Improved query performance and reduced server load significantly.</p>
 </div>
+
 </div>
 </div>
 
 <div class="card">
 <h2>Education</h2>
-<p>B.Sc Computers – Kakatiya University (2018)</p>
+<p>B.Sc Computers – Kakatiya University</p>
 </div>
 
 <div class="card">
@@ -173,10 +172,6 @@ and database migrations. Proven ability to maintain high availability and optimi
 </div>
 
 </div>
-
-<footer>
-<p>© 2026 Srinivas Reddy Seelam | SQL DBA Portfolio</p>
-</footer>
 
 </body>
 </html>
