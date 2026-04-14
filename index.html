@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Srinivas Reddy | Senior SQL DBA</title>
+<title>Srinivas Reddy Seelam | Senior SQL Server DBA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -28,7 +28,7 @@ nav {
     top:0;
     width:100%;
     background:rgba(15,23,42,0.8);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
     display:flex;
     justify-content:center;
     padding:15px;
@@ -54,11 +54,15 @@ header {
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(135deg,#0f172a,#1e293b);
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
 }
 
 header h1 {
-    font-size:55px;
+    font-size:60px;
+}
+
+.highlight {
+    color:#22c55e;
 }
 
 header p {
@@ -67,14 +71,10 @@ header p {
     color:#cbd5e1;
 }
 
-.highlight {
-    color:#22c55e;
-}
-
 /* SECTIONS */
 section {
     padding:80px 20px;
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
 }
 
@@ -89,10 +89,11 @@ h2 {
     background:#1e293b;
     padding:25px;
     margin-bottom:20px;
-    border-radius:12px;
+    border-radius:14px;
     transition:0.4s;
     opacity:0;
     transform:translateY(40px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .card.show {
@@ -116,43 +117,74 @@ h2 {
     margin-top:15px;
     background:#22c55e;
     color:white;
-    padding:10px 20px;
+    padding:12px 22px;
     border-radius:8px;
     text-decoration:none;
     font-weight:600;
+}
+
+/* LIST */
+ul {
+    padding-left:20px;
+}
+
+footer {
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
+<a href="#domain">Domain</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
 </nav>
 
+<!-- HERO -->
 <header id="home">
 <div>
 <h1>Hi, I'm <span class="highlight">Srinivas Reddy</span></h1>
 <p id="typing"></p>
-<a href="#about" class="btn">Explore My Work</a>
+<a href="#about" class="btn">Explore Profile</a>
 </div>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
 <p>
-SQL Server DBA with 6+ years of experience managing enterprise production databases.
-Expert in High Availability (Always On, Clustering), Performance Tuning,
-Backup & Recovery, and Database Migration with zero downtime strategies.
+SQL Server DBA with 6+ years of experience managing enterprise-grade production databases.
+Specialized in Healthcare IT, Laboratory Information Systems (LIS), and Payroll Management Systems
+with strong expertise in High Availability, Disaster Recovery, and Performance Optimization.
 </p>
 </div>
 </section>
 
+<!-- DOMAIN -->
+<section id="domain">
+<h2>Domain Expertise</h2>
+<div class="card">
+<ul>
+<li><b>Hospital Management Systems (HMS)</b> – Patient care, billing, pharmacy, OP/IP workflows</li>
+<li><b>Laboratory Information Systems (LIS)</b> – Diagnostic workflows, sample tracking, reporting systems</li>
+<li><b>Payroll Management Systems</b> – Salary processing, HR automation, employee records</li>
+</ul>
+<p style="margin-top:10px;">
+Ensuring high availability, secure architecture, and optimized database performance for mission-critical systems.
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
 <section id="skills">
 <h2>Technical Skills</h2>
 <div class="card skills">
@@ -161,54 +193,56 @@ Backup & Recovery, and Database Migration with zero downtime strategies.
 <span>Performance Tuning</span>
 <span>Replication</span>
 <span>Backup & Recovery</span>
+<span>Clustering</span>
 <span>Azure SQL</span>
 <span>PowerShell</span>
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
-
 <div class="card">
-<b>Athentech India Pvt Ltd – Hyderabad</b>
 <ul>
-<li>Managed 60+ production databases</li>
-<li>Configured Always On & Failover Clustering</li>
-<li>Improved performance using query tuning</li>
-<li>Handled critical production incidents</li>
-<li>Database migration SQL 2005 → 2022</li>
+<li>Managed 60+ Hospital Management Systems in production environments</li>
+<li>Delivered 10+ Laboratory Information Systems for diagnostic centers</li>
+<li>Implemented 5+ Payroll Management Systems for enterprise HR systems</li>
+<li>Configured Always On, Clustering, and High Availability solutions</li>
+<li>Handled performance tuning and critical production issues</li>
+<li>Executed database migrations with zero downtime</li>
 </ul>
 </div>
-
 </section>
 
-<section id="projects">
-<h2>Projects</h2>
-
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+<h2>Key Achievements</h2>
 <div class="card">
-🏥 Hospital Management Systems – High traffic DB optimization
+<ul>
+<li>Successfully implemented <b>60+ Hospital Systems</b></li>
+<li>Delivered <b>10+ LIS systems</b> for diagnostic labs</li>
+<li>Implemented <b>5+ Payroll Management systems</b></li>
+<li>Improved database performance and reduced downtime significantly</li>
+<li>Handled enterprise-level production support environments</li>
+</ul>
 </div>
-
-<div class="card">
-🚀 Migration Projects – Legacy system upgrade with zero downtime
-</div>
-
-<div class="card">
-⚡ Performance Tuning – Reduced query execution time & CPU load
-</div>
-
 </section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Srinivas Reddy Seelam | SQL Server DBA Portfolio
+</footer>
 
 <script>
-// TYPE WRITER
-const text = "Senior SQL Server DBA | HA/DR | Performance Tuning Expert";
+// TYPING ANIMATION
+const text = "Senior SQL Server DBA | Healthcare • LIS • Payroll Expert | HA/DR | Performance Tuning Specialist";
 let i = 0;
 
 function type() {
     if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i);
         i++;
-        setTimeout(type, 50);
+        setTimeout(type, 40);
     }
 }
 type();
